@@ -11,6 +11,9 @@ using Sandbox.Server.Http.WebApi.V1.Views;
 
 namespace Sandbox.Server.Http.WebApi.V1.Controllers
 {
+   [Route("api/users")]
+   [Route("api/user")]
+   [Route("api/profiles")]
     public class PersonController : EntityController<Person, IEntityHandler<Person>>
     {
         public PersonController(IPersonHandler handler) : base(handler)

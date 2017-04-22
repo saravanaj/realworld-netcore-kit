@@ -16,8 +16,8 @@ namespace Sandbox.Server.DomainObjects.Models
 
         public List<String> tagList { get; set; }
 
-        public Person author {get;set;}
+        public Guid authorId {get;set;}
 
-        public List<Comment> comments {get;set;}
+        public List<Guid> comments {get;set;}
     }
 }

@@ -1,4 +1,5 @@
-﻿using Sandbox.Server.BusinessLogic.Handlers.Abstract;
+﻿using System.Threading.Tasks;
+using Sandbox.Server.BusinessLogic.Handlers.Abstract;
 using Sandbox.Server.DomainObjects.Interfaces.Handlers;
 using Sandbox.Server.DomainObjects.Interfaces.Repositories;
 using Sandbox.Server.DomainObjects.Interfaces.Repositories.Abstract;
@@ -11,5 +12,14 @@ namespace Sandbox.Server.BusinessLogic.Handlers
         public PersonHandler(IPersonRepository repository) : base(repository)
         {
         }
+
+
+        public async Task<Person> Create(Person instance)
+        {
+            // TODO hash password
+
+            return await _repository.Create(instance);
+        }
+
     }
 }

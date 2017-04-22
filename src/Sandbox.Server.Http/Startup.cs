@@ -41,13 +41,15 @@ namespace Sandbox.Server.Http
 
             services.AddSwaggerGen(c =>
             {
-                //c.SwaggerDoc("v1", new Info { Title = "My API v1", Version = "API v1" });
+                c.SwaggerDoc("v1", new Info { Title = "My API v1", Version = "API v1" });
                 // Add new API version below
                 //c.SwaggerDoc("v2", new Info { Title = "My API v2", Version = "API v2" });
 
-                c.DocInclusionPredicate((docName, api) => {
-                    return api.RelativePath.Contains(docName);
-                });
+                // Uncomment in case you want Swagger API versioning
+                // In this case, all your routes have to be something like /api/v1/user
+                // c.DocInclusionPredicate((docName, api) => {
+                //     return api.RelativePath.Contains(docName);
+                // });
             });
 
         }
@@ -67,13 +69,12 @@ namespace Sandbox.Server.Http
                     Configuration.GetConnectionString("readOnlyAccess"),
                     Configuration.GetConnectionString("writeAccess"));
             
-            app.UseJwtBearerAuthentication(new JwtBearerOptions()
-            {
-                Audience = "http://localhost:5001/", 
-                Authority = "http://localhost:5000/", 
-                AutomaticAuthenticate = true
-            });
-
+            // app.UseJwtBearerAuthentication(new JwtBearerOptions()
+            // {
+            //     Audience = "http://localhost:5001/", 
+            //     Authority = "http://localhost:5000/", 
+            //     AutomaticAuthenticate = true
+            // });
 
             app.UseMvc();
 
@@ -83,7 +84,7 @@ namespace Sandbox.Server.Http
                 app.UseSwaggerUi(c => {
                     //c.SwaggerEndpoint("/swagger/v2/swagger.json", "V2 Docs");
                     // Add new Api version above
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Docs");
                 });
             }
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Sandbox.Server.DomainObjects.Models.Abstract;
 
 namespace Sandbox.Server.DomainObjects.Models
@@ -13,9 +14,9 @@ namespace Sandbox.Server.DomainObjects.Models
 
     public string image {get;set;}
 
-    public List<Article> favorites {get;set;}
+    public List<Guid> favorites {get;set;}
 
-    public List<Person> following {get;set;}
+    public List<Guid> following {get;set;}
 
     public string hash {get;set;}
 

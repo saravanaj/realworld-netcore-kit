@@ -9,8 +9,8 @@ namespace Sandbox.Server.DomainObjects.Models
 
         public string body {get;set;}
 
-        public Person author {get;set;}
+        public Guid authorId {get;set;}
 
-        public Article article {get;set;}
+        public Guid articleId {get;set;}
     }
 }
