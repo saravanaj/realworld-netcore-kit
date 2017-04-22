@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Development",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/src/Sandbox.Server.Http/bin/Debug/netcoreapp1.0/Sandbox.Server.Http.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/src/Sandbox.Server.Http",
+            "stopAtEntry": false,
+            "externalConsole": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "development"
+            }
+        }
+    ]
+}
