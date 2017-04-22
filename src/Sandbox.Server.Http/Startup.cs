@@ -41,7 +41,7 @@ namespace Sandbox.Server.Http
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API v1", Version = "API v1" });
+                //c.SwaggerDoc("v1", new Info { Title = "My API v1", Version = "API v1" });
                 // Add new API version below
                 //c.SwaggerDoc("v2", new Info { Title = "My API v2", Version = "API v2" });
 
@@ -66,6 +66,14 @@ namespace Sandbox.Server.Http
                 .OpenConnections(
                     Configuration.GetConnectionString("readOnlyAccess"),
                     Configuration.GetConnectionString("writeAccess"));
+            
+            app.UseJwtBearerAuthentication(new JwtBearerOptions()
+            {
+                Audience = "http://localhost:5001/", 
+                Authority = "http://localhost:5000/", 
+                AutomaticAuthenticate = true
+            });
+
 
             app.UseMvc();
 

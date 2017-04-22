@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sandbox.Server.DomainObjects.Interfaces.Handlers;
 using Sandbox.Server.DomainObjects.Interfaces.Handlers.Abstract;
@@ -10,7 +11,6 @@ using Sandbox.Server.Http.WebApi.V1.Views;
 
 namespace Sandbox.Server.Http.WebApi.V1.Controllers
 {
-    [Route("api/v1/persons")]
     public class PersonController : EntityController<Person, IEntityHandler<Person>>
     {
         public PersonController(IPersonHandler handler) : base(handler)
