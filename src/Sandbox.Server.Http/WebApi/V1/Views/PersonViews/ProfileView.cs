@@ -5,13 +5,20 @@ using Sandbox.Server.Http.WebApi.V1.Views.Abstract;
 
 namespace Sandbox.Server.Http.WebApi.V1.Views.PersonViews
 {
-    public class ProvileView : EntityView<Person>
+    public class RootProfileView
     {
-        public ProvileView() : base()
+
+        public ProfileView profile {get;set;}
+
+    }
+
+    public class ProfileView : EntityView<Person>
+    {
+        public ProfileView() : base()
         {
         }
 
-        public ProvileView(Person person) : base(person)
+        public ProfileView(Person person) : base(person)
         {
         }
 

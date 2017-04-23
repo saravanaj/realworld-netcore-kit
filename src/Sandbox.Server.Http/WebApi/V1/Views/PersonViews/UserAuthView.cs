@@ -5,6 +5,11 @@ using Sandbox.Server.Http.WebApi.V1.Views.Abstract;
 
 namespace Sandbox.Server.Http.WebApi.V1.Views.PersonViews
 {
+    public class RootUserAuthView
+    {
+        public UserAuthView user {get;set;}
+    }
+
     public class UserAuthView : EntityView<Person>
     {
         public UserAuthView() : base()
