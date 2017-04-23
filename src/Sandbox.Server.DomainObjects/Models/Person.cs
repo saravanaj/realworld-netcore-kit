@@ -14,9 +14,9 @@ namespace Sandbox.Server.DomainObjects.Models
 
     public string image {get;set;}
 
-    public List<Guid> favorites {get;set;}
+    public List<Article> favorites {get;set;}
 
-    public List<Guid> following {get;set;}
+    public List<Person> following {get;set;}
 
     public string hash {get;set;}
 

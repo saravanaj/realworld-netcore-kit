@@ -33,11 +33,19 @@ namespace Sandbox.Server.Http
             // Add framework services.
             services.AddMvc();
 
+            /* DEPENDENCY INJECTIONS */
+
             // Data access dependency injection
             services.AddSingleton<IPersonRepository, PersonRepository>();
+            services.AddSingleton<IArticleRepository, ArticleRepository>();
+            services.AddSingleton<ICommentRepository, CommentRepository>();
 
             // Business logic dependency injection
             services.AddSingleton<IPersonHandler, PersonHandler>();
+            services.AddSingleton<IArticleHandler, ArticleHandler>();
+            services.AddSingleton<ICommentHandler, CommentHandler>();
+
+            /* SWAGGER */
 
             services.AddSwaggerGen(c =>
             {
