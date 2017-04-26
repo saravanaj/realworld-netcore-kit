@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json.Serialization;
 using Sandbox.Server.BusinessLogic.Handlers;
 using Sandbox.Server.DataAccess.Repositories;
 using Sandbox.Server.DomainObjects.Interfaces.Handlers;
@@ -31,7 +32,11 @@ namespace Sandbox.Server.Http
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc()
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                });
 
             /* DEPENDENCY INJECTIONS */
 
