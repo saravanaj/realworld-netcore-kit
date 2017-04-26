@@ -7,10 +7,10 @@ namespace Sandbox.Server.DomainObjects.Models
     public class Comment : Entity
     {
 
-        public string body {get;set;}
+        public string Body {get;set;}
 
-        public Person author {get;set;}
+        public Person Author {get;set;}
 
-        public Article article {get;set;}
+        public Article Article {get;set;}
     }
 }

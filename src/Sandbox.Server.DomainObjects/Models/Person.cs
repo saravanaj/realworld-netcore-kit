@@ -6,20 +6,20 @@ namespace Sandbox.Server.DomainObjects.Models
 {
   public class Person : Entity
   {
-    public string username { get; set; }
+    public string Username { get; set; }
     
-    public string email { get; set; }
+    public string Email { get; set; }
 
-    public string bio {get;set;}
+    public string Bio {get;set;}
 
-    public string image {get;set;}
+    public string Image {get;set;}
 
-    public List<Article> favorites {get;set;}
+    public List<Article> Favorites {get;set;}
 
-    public List<Person> following {get;set;}
+    public List<Person> Following {get;set;}
 
-    public string hash {get;set;}
+    public string Hash {get;set;}
 
-    public string salt {get;set;}
+    public string Salt {get;set;}
   }
 }
