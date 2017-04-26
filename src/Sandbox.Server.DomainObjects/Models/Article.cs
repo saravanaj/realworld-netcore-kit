@@ -6,18 +6,18 @@ namespace Sandbox.Server.DomainObjects.Models
 {
     public class Article : Entity
     {
-        public string slug { get; set; }
+        public string Slug { get; set; }
 
-        public string title { get; set; }
+        public string Title { get; set; }
 
-        public string description { get; set; }
+        public string Description { get; set; }
 
-        public string body { get; set; }
+        public string Body { get; set; }
 
-        public List<String> tagList { get; set; }
+        public List<String> TagList { get; set; }
 
-        public Person author {get;set;}
+        public Person Author {get;set;}
 
-        public List<Comment> comments {get;set;}
+        public List<Comment> Comments {get;set;}
     }
 }
