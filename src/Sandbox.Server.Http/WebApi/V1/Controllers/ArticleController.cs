@@ -31,14 +31,14 @@ namespace Sandbox.Server.Http.WebApi.V1.Controllers
         public async Task<JsonResult> Post([FromBody] RootArticleView request)
         {
             Article entity = new Article();
-            request.article.Hydrate(entity);
+            request.Article.Hydrate(entity);
 
             var created = await _handler.Create(entity);
 
             Response.StatusCode = 201;
 
             // anon type to have "article" root object name (API contract)
-            return Json(new RootArticleView() { article = new ArticleView(created) } );
+            return Json(new RootArticleView() { Article = new ArticleView(created) } );
         }
     }
 }

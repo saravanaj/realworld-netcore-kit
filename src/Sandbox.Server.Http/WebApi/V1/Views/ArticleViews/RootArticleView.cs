@@ -11,7 +11,7 @@ namespace Sandbox.Server.Http.WebApi.V1.Views.ArticleViews
         {
         }
 
-        public ArticleView article {get;set;}
+        public ArticleView Article {get;set;}
 
     }
 }

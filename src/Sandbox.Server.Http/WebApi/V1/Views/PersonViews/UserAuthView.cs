@@ -7,7 +7,7 @@ namespace Sandbox.Server.Http.WebApi.V1.Views.PersonViews
 {
     public class RootUserAuthView
     {
-        public UserAuthView user {get;set;}
+        public UserAuthView User {get;set;}
     }
 
     public class UserAuthView : EntityView<Person>
@@ -20,15 +20,15 @@ namespace Sandbox.Server.Http.WebApi.V1.Views.PersonViews
         {
         }
 
-           public string username { get; set; }
+        public string Username { get; set; }
     
-            public string email { get; set; }
+        public string Email { get; set; }
 
-            public string bio {get;set;}
+        public string Bio {get;set;}
 
-            public string image {get;set;}
+        public string Image {get;set;}
 
-            public string token {get;set;}
+        public string Token {get;set;}
 
     }
 }
