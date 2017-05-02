@@ -17,27 +17,27 @@ namespace Sandbox.Server.Http.WebApi.V1.Views.ArticleViews
         {
         }
 
-        public string slug { get; set; }
+        public string Slug { get; set; }
 
-        public string title { get; set; }
+        public string Title { get; set; }
 
-        public string description { get; set; }
+        public string Description { get; set; }
 
-        public string body { get; set; }
-
-        [JsonConverter(typeof(IsoDateTimeConverter))]
-        public DateTime createdAt { get; set; } = new DateTime();
+        public string Body { get; set; }
 
         [JsonConverter(typeof(IsoDateTimeConverter))]
-        public DateTime updatedAt { get; set; } = new DateTime();
+        public DateTime CreatedAt { get; set; } = new DateTime();
 
-        public bool favorited { get; set; }
+        [JsonConverter(typeof(IsoDateTimeConverter))]
+        public DateTime UpdatedAt { get; set; } = new DateTime();
 
-        public List<string> tagList {get;set; } = new List<string>();
+        public bool Favorited { get; set; }
 
-        public int favoritesCount { get; set; }
+        public List<string> TagList {get;set; } = new List<string>();
 
-        public Person author {get;set;}
+        public int FavoritesCount { get; set; }
+
+        public Person Author {get;set;}
 
     }
 }
