@@ -11,7 +11,7 @@ namespace Sandbox.Server.DataAccess.Repositories.Abstract
     {
         private static readonly Random RandomGenerator;
 
-        private MongoCollectionHandler collectionHandler = new MongoCollectionHandler();
+        protected MongoCollectionHandler collectionHandler = new MongoCollectionHandler();
 
         static EntityRepository()
         {

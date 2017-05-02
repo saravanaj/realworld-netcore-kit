@@ -13,5 +13,7 @@ namespace Sandbox.Server.Http.WebApi.V1.Views.ArticleViews
 
         public List<ArticleView> Articles {get;set;}
 
+        public int ArticlesCount {get;set;}
+
     }
 }

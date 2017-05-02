@@ -82,12 +82,6 @@ namespace Sandbox.Server.Http
                     Configuration.GetConnectionString("readOnlyAccess"),
                     Configuration.GetConnectionString("writeAccess"));
             
-            // app.UseJwtBearerAuthentication(new JwtBearerOptions()
-            // {
-            //     Audience = "http://localhost:5001/", 
-            //     Authority = "http://localhost:5000/", 
-            //     AutomaticAuthenticate = true
-            // });
 
             app.UseMvc();
 

@@ -15,6 +15,8 @@ namespace Sandbox.Server.Http.WebApi.V1.Views.ArticleViews
 
         public ArticleView(Article model) : base(model)
         {
+            this.CreatedAt = model.GetCreationDate();
+            this.UpdatedAt = model.GetModificationDate();
         }
 
         public string Slug { get; set; }
